@@ -18,6 +18,7 @@ in
      packages = with pkgs; 
       [
         brave
+        bun
       ];
   };
 }
