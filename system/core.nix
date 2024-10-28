@@ -16,6 +16,8 @@
     # default desktop Environment
     ./core/kde.nix
     ./packages.nix
+    # autologin services
+    ./autologin.nix
   ];
 
   # enable options

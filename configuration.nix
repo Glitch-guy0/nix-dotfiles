@@ -11,7 +11,7 @@
       # adding system configuration
       ./system/core.nix
       # users
-      ./home/users.nix
+      ./home/unknown/user.nix
       # networking option
       ./system/network/default.nix
       # userInterface / users
