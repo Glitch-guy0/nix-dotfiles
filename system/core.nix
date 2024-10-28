@@ -25,4 +25,5 @@
   config.desktopEnvironment.kde.enable = true;
   # config.printerService.enable = true;
   # config.touchpad.enable = true;
+  config.virtualisation.vmware.guest.enable = true;
 }
