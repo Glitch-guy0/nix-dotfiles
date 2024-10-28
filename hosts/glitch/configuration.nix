@@ -3,23 +3,28 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # adding system configuration
-      ./system/core.nix
+      ../system/core.nix
       # users
-      ./home/unknown/user.nix
+      ../home/unknown/user.nix
       # networking option
-      ./system/network/default.nix
-      # userInterface / users
-      ./hosts/interface.nix
-      ./hosts/laptop.nix
+      ../system/network/default.nix
     ];
 
-  
+
+  # hostname of system
+  networking.hostname = "glitch";
+  # laptop services
+  config.touchpad.enable = true;
+  # vmware guest tools
+  virtualisation.vmware.guest.enable = true;
+  # enable kde desktop environment
+  config.desktopEnvironment.kde.enable = true;
+
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

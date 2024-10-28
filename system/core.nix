@@ -20,10 +20,9 @@
     ./autologin.nix
   ];
 
-  # enable options
-  # desktop environment option
-  config.desktopEnvironment.kde.enable = true;
+  # enable options / available options for hosts
+  # config.desktopEnvironment.kde.enable = true;
   # config.printerService.enable = true;
   # config.touchpad.enable = true;
-  config.virtualisation.vmware.guest.enable = true;
+  # config.virtualisation.vmware.guest.enable = true;
 }
