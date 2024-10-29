@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ ... }:
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -10,8 +10,13 @@
     ];
 
 
-  networking.hostname = "glitch";
-  config.touchpad.enable = true;
+  # ************* Testing Section ************************
+  # removing this as this option is not available it seems
+  # checking if it's defined through flakes by itself?
+  #networking.hostname = "glitch";
+  # **************************************************
+
+  # config.touchpad.enable = true;
   virtualisation.vmware.guest.enable = true;
 
   # This value determines the NixOS release from which the default
