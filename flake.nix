@@ -9,10 +9,7 @@
   outputs = { self, nixpkgs, ... }@inputs: 
   let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.{
-      inherit system;
-      allowUnfree = true;
-    };
+    pkgs = nixpkgs.legacyPackages.${system};
   in 
   {
     nixosConfigurations.glitch = nixpkgs.lib.nixosSystem {
@@ -20,6 +17,7 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./system
+        ./users/unknown
         ./hosts/glitch/configuration.nix
       ];
     };
