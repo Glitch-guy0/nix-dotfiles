@@ -1,0 +1,4 @@
+for wayland to work install these packages
+1. wl-clipboard
+2. wayland-utils +> replacement to xdg-utils (try only wayland / have both if error occurs)
+

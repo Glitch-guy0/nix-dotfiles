@@ -12,6 +12,7 @@
       [
         brave
         bun
+        xdg-utils # for ipc etc...
       ];
   };
 }

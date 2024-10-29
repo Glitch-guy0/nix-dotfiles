@@ -4,5 +4,4 @@
 { config, options, ... }:
 {
   config.touchpad.enable = true;
-
 }
