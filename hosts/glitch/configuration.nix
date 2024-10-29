@@ -7,12 +7,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # adding system configuration
-      ../system/core.nix
       # users
       ../home/unknown/user.nix
-      # networking option
-      ../system/network/default.nix
     ];
 
 
@@ -25,6 +21,8 @@
   # enable kde desktop environment
   config.desktopEnvironment.kde.enable = true;
 
+  # enable touchpad
+  config.touchpad.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
