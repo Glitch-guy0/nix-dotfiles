@@ -18,7 +18,7 @@
       modules = [
         ./system
         ./users/unknown
-        ./hosts/glitch/configuration.nix
+        ./hosts/glitch
       ];
     };
   };
