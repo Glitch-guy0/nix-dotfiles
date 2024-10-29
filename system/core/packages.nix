@@ -12,6 +12,7 @@
     vscode # user
     tree
     wget
+    home-manager
   ];
 
   # *************************  Desktop Environment ***********************************

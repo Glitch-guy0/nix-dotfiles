@@ -1,1 +1,9 @@
-# this is user:unknown's home-manager space
+{ config, pkgs, ... }:
+{
+  home.username = "unknown";
+  home.homeDirectory = "/home/unknown";
+  home.packages = with pkgs;[
+    neofetch
+    btop
+  ];
+}
