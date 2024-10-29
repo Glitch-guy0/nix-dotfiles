@@ -2,21 +2,14 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ ... }:
+{ config, ... }:
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
-
-  # ************* Testing Section ************************
-  # removing this as this option is not available it seems
-  # checking if it's defined through flakes by itself?
-  #networking.hostname = "glitch";
-  # **************************************************
-
-  # config.touchpad.enable = true;
+  config.touchpad.enable = true;
   virtualisation.vmware.guest.enable = true;
 
   # This value determines the NixOS release from which the default
@@ -25,5 +18,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  # system.stateVersion = "24.05"; # Did you read the comment?
+  # This is required even if nixpkgs is set (default) {to the latest stable version}
+  system.stateVersion = "24.05"; # Did you read the comment?
 }
