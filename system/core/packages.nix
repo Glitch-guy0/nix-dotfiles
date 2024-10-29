@@ -7,9 +7,7 @@
   environment.systemPackages = with pkgs;
   [
     git
-    kitty # user
     vim
-    vscode # user
     tree
     wget
     home-manager
