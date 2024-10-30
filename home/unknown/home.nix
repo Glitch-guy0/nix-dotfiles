@@ -3,10 +3,13 @@
   home.username = "unknown";
   home.homeDirectory = "/home/unknown";
   home.packages = with pkgs;[
-    neofetch
+    brave
     btop
-    vscode
+    bun
     kitty
+    neofetch
+    vscode
+    xdg-utils # for ipc etc...
   ];
 
 

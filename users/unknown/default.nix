@@ -7,12 +7,7 @@
       "networkmanager" # networking stuff
       "wheel" # superuser 
     ];
-     # enter list of packages
-     packages = with pkgs; 
-      [
-        brave
-        bun
-        xdg-utils # for ipc etc...
-      ];
+     # packages are added through home-manager
+     #packages = with pkgs; [ ];
   };
 }
