@@ -16,9 +16,9 @@
   outputs = { nixpkgs, home-manager, hyprland, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.{
+      pkgs = import nixpkgs {
         inherit system;
-        allowUnfree = true;
+        config.allowUnfree = true;
       };
     in {
       homeConfigurations."unknown" = home-manager.lib.homeManagerConfiguration {
