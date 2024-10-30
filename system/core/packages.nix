@@ -1,7 +1,9 @@
 {pkgs, inputs, ...}:
 {
 
-  #imports = [];
+  imports = [
+    ./packages/hyprland.nix
+  ];
 
   # ************************* System Packages  **********************************
   environment.systemPackages = with pkgs;
@@ -16,15 +18,6 @@
   # *************************  Desktop Environment ***********************************
   # services.xserver.enable = true;  # X11
 
-  # hyprland section
-  services.displayManager.sddm.wayland.enable = true; # wayland
-
-  # hyprland enable
-  programs.hyprland.enable = true;
-
-
-
-  # kde section
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   # plasma 6 desktop env
