@@ -12,6 +12,10 @@
     xdg-utils # for ipc etc...
   ];
 
+  imports = [
+    ./hyprland.nix
+  ];
+
 
 
   # You should not change this value, even if you update Home Manager. If you do

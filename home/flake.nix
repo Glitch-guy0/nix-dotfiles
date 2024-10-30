@@ -4,20 +4,26 @@
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, hyprland, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = nixpkgs.legacyPackages.{
+        inherit system;
+        allowUnfree = true;
+      };
     in {
       homeConfigurations."unknown" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-
+        extraSpecialArgs = { inherit inputs; };
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
         modules = [ ./unknown/home.nix ];
