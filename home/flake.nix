@@ -21,13 +21,13 @@
     in {
       homeConfigurations."unknown" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        # Optionally use extraSpecialArgs
+        # to pass through arguments to home.nix
         extraSpecialArgs = { inherit inputs; };
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
         modules = [ ./unknown/home.nix ];
 
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
       };
     };
 }

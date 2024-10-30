@@ -10,10 +10,11 @@
     neofetch
     vscode
     xdg-utils # for ipc etc...
+    firefox # for testing
   ];
 
   imports = [
-    ./hyprland.nix
+    #./hyprland.nix
   ];
 
 

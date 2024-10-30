@@ -4,7 +4,6 @@
   inputs = {
     # current stable version of nixos
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: 

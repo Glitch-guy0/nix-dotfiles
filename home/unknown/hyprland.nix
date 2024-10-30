@@ -1,13 +1,18 @@
 { pkgs, lib, inputs, ... }:
 {
+
   wayland.windowManager.hyprland = {
-    enable = true;
+    # note: even it's installed through system packages
+    # it should be enabled here to work for user environment
     
+    enable = true;
+
     settings = {
       "$mod" = "SUPER";
       bind =
         [
           "$mod, F, exec, firefox"
+          "$mod, K, exec, kitty"
           ", Print, exec, grimblast copy area"
         ]
         ++ (
